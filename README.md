@@ -33,5 +33,22 @@ php artisan migrate
 ```
 > Importante! Recuerde que antes de ejecutar nuestra migración debe establecer el largo de caracteres que tendrá por defecto las columnas a migrar, esto se establece en el archivo: app\Providers\AppServiceProvider.php, agregando el siguiente código en la función "boot": "Schema::defaultStringLength(191);".
 
+* Instalación de herramienta de depuración "Laravel Debugbar":
+> Antes de continuar con nuestra migración, se recomienda instalar la librería de "Laravel Debugbar", el cual permite trazar de forma optima la performance del servicio además de encontrar con varios métodos de depuración de código, para mas información puede visitar el repositorio publico de GitHub: [laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
+```sh
+composer require barryvdh/laravel-debugbar --dev
+php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
+```
+* Publicación de archivos de errores:
+```sh
+php artisan vendor:publish --tag=laravel-error
+```
+* Libreria Laravel Español:
+```sh
+composer require laraveles/spanish
+php artisan vendor:publish --tag=lang
+php artisan laraveles:install-lang
+```
+
 
 
