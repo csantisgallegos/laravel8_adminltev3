@@ -108,12 +108,12 @@ php artisan optimize
 ## Comandos de instalación asociados a proyecto actual:
 ```sh
 git clone https://github.com/csantisgallegos/laravel8_adminltev3.git
-cd laravel8
+cd laravel8_adminltev3/laravel8
 cp .env.example .env (debe establecer variables de conexion a base de datos)
-php artisan key:generate
- php artisan storage:link
 composer update
 npm install && npm run dev
+php artisan key:generate
+php artisan storage:link
 php artisan route:cache && php artisan view:cache && php artisan config:clear && php artisan optimize
 ```
 ---
