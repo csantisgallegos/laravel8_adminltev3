@@ -65,6 +65,50 @@ php artisan ui bootstrap --auth
 php artisan adminlte:install --only=auth_views
 npm install && npm run dev
 ```
+* Una vez instalada la libreria por completo podemos comenzar a utilizas las plantillas predefinidas, para esto podemos apoyarnos en la siguiente documentación:  [Laravel-AdminLTE](https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Usage)
+* Ejemplo: archivo "laravel8\resources\views\dashboard.blade.php" reemplazar su contenido por el siguiente código:
+```php
+@extends('adminlte::page')
+
+@section('title', 'Dashboard')
+
+@section('content_header')
+    <h1>Dashboard</h1>
+@stop
+
+@section('content')
+    <p>Welcome to this beautiful admin panel.</p>
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop
+```
+* ![N|Solid](img/dashboard.png)
+
+
+---
+## Comandos de ayuda:
+
+```sh
+composer update
+php artisan storage:link
+npm install
+npm run dev
+php artisan route:cache 
+php artisan view:cache 
+php artisan config:clear
+php artisan optimize
+```
+Bibliografía:
+* [Git - la guía sencilla](http://rogerdudler.github.io/git-guide/index.es.html)
+* [Laravel 8](https://laravel.com/docs/8.x)
+* [Laravel-AdminLTE](https://github.com/jeroennoten/Laravel-AdminLTE)
+
 
 
 
