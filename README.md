@@ -34,7 +34,7 @@ php artisan migrate
 > Importante! Recuerde que antes de ejecutar nuestra migración debe establecer el largo de caracteres que tendrá por defecto las columnas a migrar, esto se establece en el archivo: app\Providers\AppServiceProvider.php, agregando el siguiente código en la función "boot": "Schema::defaultStringLength(191);".
 
 * Instalación de herramienta de depuración "Laravel Debugbar":
-> Antes de continuar con nuestra migración, se recomienda instalar la librería de "Laravel Debugbar", el cual permite trazar de forma optima la performance del servicio además de encontrar con varios métodos de depuración de código, para mas información puede visitar el repositorio publico de GitHub: [laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
+> Antes de continuar con nuestra migración, se recomienda instalar la librería de "Laravel Debugbar", el cual permite trazar de forma óptima la performance del servicio además de encontrar con varios métodos de depuración de código, para mas información puede visitar el repositorio público de GitHub: [laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
 ```sh
 composer require barryvdh/laravel-debugbar --dev
 php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
@@ -43,7 +43,7 @@ php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
 ```sh
 php artisan vendor:publish --tag=laravel-error
 ```
-* Libreria Laravel Español:
+* Librería Laravel Español:
 ```sh
 composer require laraveles/spanish
 php artisan vendor:publish --tag=lang
@@ -65,7 +65,7 @@ php artisan ui bootstrap --auth
 php artisan adminlte:install --only=auth_views
 npm install && npm run dev
 ```
-* Una vez instalada la libreria por completo podemos comenzar a utilizas las plantillas predefinidas, para esto podemos apoyarnos en la siguiente documentación:  [Laravel-AdminLTE](https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Usage)
+* Una vez instalada la librería por completo podemos comenzar a utilizar las plantillas predefinidas, para esto podemos apoyarnos en la siguiente documentación:  [Laravel-AdminLTE](https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Usage)
 * Ejemplo: archivo "laravel8\resources\views\dashboard.blade.php" reemplazar su contenido por el siguiente código:
 ```php
 @extends('adminlte::page')
@@ -92,7 +92,7 @@ npm install && npm run dev
 
 
 ---
-## Comandos de ayuda:
+## Comandos generales de ayuda:
 
 ```sh
 composer update
@@ -104,6 +104,19 @@ php artisan view:cache
 php artisan config:clear
 php artisan optimize
 ```
+---
+## Comandos de instalación asociados a proyecto actual:
+```sh
+git clone https://github.com/csantisgallegos/laravel8_adminltev3.git
+cd laravel8
+cp .env.example .env (debe establecer variables de conexion a base de datos)
+php artisan key:generate
+ php artisan storage:link
+composer update
+npm install && npm run dev
+php artisan route:cache && php artisan view:cache && php artisan config:clear && php artisan optimize
+```
+---
 Bibliografía:
 * [Git - la guía sencilla](http://rogerdudler.github.io/git-guide/index.es.html)
 * [Laravel 8](https://laravel.com/docs/8.x)
