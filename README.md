@@ -49,6 +49,22 @@ composer require laraveles/spanish
 php artisan vendor:publish --tag=lang
 php artisan laraveles:install-lang
 ```
+* Instalación AdminLte
+```sh
+composer require jeroennoten/laravel-adminlte
+php artisan adminlte:install
+```
+* Para visualizar los paquetes instalados de AdminLte puede ejecutar el siguiente comando:
+```sh
+php artisan adminlte:status
+```
+* Instalación de vistas de autentificación AdminLte:
+```sh
+composer require laravel/ui
+php artisan ui bootstrap --auth
+php artisan adminlte:install --only=auth_views
+npm install && npm run dev
+```
 
 
 
