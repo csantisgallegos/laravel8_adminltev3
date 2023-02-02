@@ -1,5 +1,9 @@
 # Proyecto Laravel 8 con plantilla AdminLte V3
 
+## Control de cambios:
+* 02-02-2023: 
+  * ajuste de comandos de instalacion de plantilla
+  * listado/instalación plugins adminlte
 ## Requisitos Previos:
 * Instalar composer de forma global [Link](https://getcomposer.org/)
 * Instalar Git [Link](https://git-scm.com/downloads)
@@ -63,6 +67,7 @@ php artisan adminlte:status
 composer require laravel/ui
 php artisan ui bootstrap --auth
 php artisan adminlte:install --only=auth_views
+php artisan adminlte:install --only=main_views
 npm install && npm run dev
 ```
 * Una vez instalada la librería por completo podemos comenzar a utilizar las plantillas predefinidas, para esto podemos apoyarnos en la siguiente documentación:  [Laravel-AdminLTE](https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Usage)
@@ -89,8 +94,21 @@ npm install && npm run dev
 @stop
 ```
 * ![N|Solid](img/dashboard.png)
+----
 
+Instalación de plugins adicionales internos de adminlte
 
+> AdminLte v3 incluye una lista de paquetes asociados a librerias mas recurrentes con las cuales se integra de forma habitual.
+> Para tener la lista de los plugins disponibles puede ejecutar el siguiente comando:
+
+```sh
+php artisan adminlte:plugins
+```
+
+> Para instalar algunos de estos plugins puede ejecutar el siguiente comando indicando el "Key" del plugin:
+```sh
+php artisan adminlte:plugins install --plugin=icheckBootstrap
+```
 ---
 ## Comandos generales de ayuda:
 
