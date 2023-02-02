@@ -108,6 +108,7 @@ php artisan adminlte:plugins
 > Para instalar algunos de estos plugins puede ejecutar el siguiente comando indicando el "Key" del plugin:
 ```sh
 php artisan adminlte:plugins install --plugin=icheckBootstrap
+php artisan adminlte:plugins install --plugin=paceProgress
 ```
 ---
 ## Comandos generales de ayuda:
